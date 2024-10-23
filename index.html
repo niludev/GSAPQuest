@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GSAPQuest</title>
+    <!--    <link rel="stylesheet" href="css/styles.css">-->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /*.bg-cover {*/
+        /*    background-image: url('assets/images/background.jpg');*/
+        /*    background-size: cover;*/
+        /*    background-position: center;*/
+        /*    min-height: 100vh;*/
+        /*    background-attachment: fixed;*/
+        /*    background-repeat: no-repeat;*/
+        /*    filter: brightness(50%) blur(5px);*/
+        /*}*/
+
+        .bg-cover {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* اعمال فیلتر فقط روی عکس بک‌گراند */
+        .bg-cover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            filter: brightness(65%) blur(5px); /* فیلتر فقط روی عکس بک‌گراند */
+            z-index: -1; /* قرار دادن قبل از محتوای اصلی */
+        }
+
+        .the-blur {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            min-height: 50px;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, .4);
+            z-index: 1010;
+            -webkit-filter: blur(20px);
+            -moz-filter: blur(20px);
+            -o-filter: blur(20px);
+            -ms-filter: blur(20px);
+            filter: blur(20px);
+        }
+
+        .btn-start {
+            background-color: #F86C48
+        }
+
+        .btn-start:hover {
+            background-color: #EA4A4C
+        }
+    </style>
+</head>
+<body>
+<div class="bg-cover">
+    <header class="mb-5 bg-light bg-opacity-50 shadow-lg bg-body">
+        <div class="p-2 d-flex flex-row justify-content-between align-items-center text-dark fw-bold">
+            <p class="m-0">GSAPQuest</p>
+            <nav>
+                <a class="mx-2 text-dark fw-bold text-decoration-none" href="#">Startseite</a>
+                <a class="mx-2 text-dark fw-bold text-decoration-none" href="#about">Über das Spiel</a>
+                <a class="mx-2 text-dark fw-bold text-decoration-none" href="#levels">Spielstufen</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="mt-5 mb-4 mx-4 p-4 d-flex bg-white bg-opacity-50 shadow-lg bg-body rounded">
+        <div class="w-25 me-3 align-content-center">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam</p>
+            <button class="py-2 px-3 rounded border-0 text-white btn-start">Spiel starten</button>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide w-75" data-bs-ride="carousel">
+            <!-- Indikator -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+            </div>
+
+            <!-- Carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/L1.jpg" class="d-block w-100 rounded" style="max-height: 30rem"
+                         alt=" 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/L2.jpg" class="d-block w-100 rounded" style="max-height: 30rem"
+                         alt=" 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/L3.jpg" class="d-block w-100 rounded" style="max-height: 30rem"
+                         alt=" 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/L4.jpg" class="d-block w-100 rounded" style="max-height: 30rem"
+                         alt=" 4">
+                </div>
+            </div>
+
+            <!-- kleine Tasten -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Vorherige</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Nächste</span>
+            </button>
+        </div>
+    </div>
+
+    <div>
+        <h1 class=" mt-2 pt-4 text-center text-white">Erlebe das Spiel</h1>
+        <div class="d-flex justify-content-around">
+            <div class="m-4 p-4 bg-white bg-opacity-50 shadow-lg bg-body rounded">
+                <img src="assets/images/v1.jpg" class="mb-2 d-block w-100 rounded" alt=" 1">
+                <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam</p>
+            </div>
+            <div class="m-4 p-4 bg-white bg-opacity-50 shadow-lg bg-body rounded">
+                <img src="assets/images/v2.jpg" class="mb-2 d-block w-100 rounded" alt=" 1">
+                <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam</p>
+            </div>
+            <div class="m-4 p-4 bg-white bg-opacity-50 shadow-lg bg-body rounded">
+                <img src="assets/images/v3.jpg" class="mb-2 d-block w-100 rounded" alt=" 1">
+                <p class="text-center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1 class=" mt-2 pt-4 text-center text-white">Levelauswahl</h1>
+        <div class="d-flex justify-content-around">
+            <div class="m-4 p-4">
+                <img src="assets/images/v1.jpg" class="mb-2 d-block w-100 rounded-circle" style="max-height: 20rem; max-width: 20rem" alt=" 1">
+                <p class="p-4 text-center fw-bold bg-white bg-opacity-50 shadow-lg bg-body rounded-circle" style="max-width: 20rem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+            </div>
+            <div class="m-4 p-4">
+                <img src="assets/images/v2.jpg" class="mb-2 d-block w-100 rounded-circle" style="max-height: 20rem; max-width: 20rem" alt=" 1">
+                <p class="p-4 text-center fw-bold bg-white bg-opacity-50 shadow-lg bg-body rounded-circle" style="max-width: 20rem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around">
+            <div class="m-4 p-4">
+                <img src="assets/images/v1.jpg" class="mb-2 d-block w-100 rounded-circle" style="max-height: 20rem; max-width: 20rem" alt=" 1">
+                <p class="p-4 text-center fw-bold bg-white bg-opacity-50 shadow-lg bg-body rounded-circle" style="max-width: 20rem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+            </div>
+            <div class="m-4 p-4">
+                <img src="assets/images/v2.jpg" class="mb-2 d-block w-100 rounded-circle" style="max-height: 20rem; max-width: 20rem" alt=" 1">
+                <p class="p-4 text-center fw-bold bg-white bg-opacity-50 shadow-lg bg-body rounded-circle" style="max-width: 20rem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="p-2 bottom-0 w-100">
+        <p class="m-0 text-center fw-bold">Copyright © 2024 - GSAPQuest</p>
+    </footer>
+</div>
+
+
+<script src="js/app.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"-->
+<!--        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"-->
+<!--        crossorigin="anonymous"></script>-->
+
+<script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
