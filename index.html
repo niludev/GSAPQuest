@@ -22,7 +22,6 @@
             min-height: 100vh;
         }
 
-        /* اعمال فیلتر فقط روی عکس بک‌گراند */
         .bg-cover::before {
             content: "";
             position: absolute;
@@ -35,8 +34,8 @@
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            filter: brightness(65%) blur(5px); /* فیلتر فقط روی عکس بک‌گراند */
-            z-index: -1; /* قرار دادن قبل از محتوای اصلی */
+            filter: brightness(65%) blur(5px);
+            z-index: -1;
         }
 
         .the-blur {
