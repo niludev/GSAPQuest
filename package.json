@@ -6,10 +6,12 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
-    "gsap": "^3.12.5"
+    "gsap": "^3.12.5",
+    "http-server": "^14.1.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ."
   },
   "keywords": [],
   "author": "",
